@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-import numpy as np
+
 
 # Datos de la tabla
 backbone_models = ['AlexNet_noDA', 'resnet_152_noDA', 'resnext_noDA', 'mobilenet_noDA', 'efficientnet_noDA', 'convnext_noDA']

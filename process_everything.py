@@ -1,25 +1,3 @@
-# Commented out IPython magic to ensure Python compatibility.
-#%matplotlib inline
-import torchvision
-import torchvision.datasets as dset
-import torchvision.transforms as transforms
-from torch.utils.data import DataLoader,Dataset
-import matplotlib.pyplot as plt
-import torchvision.utils
-import numpy as np
-import random
-from PIL import Image
-import torch
-from torch.autograd import Variable
-import PIL.ImageOps
-import torch.nn as nn
-from torch import optim
-import torch.nn.functional as F
-import multiprocessing
-from multiprocessing import Process
-import torchvision.models as models
-import torch
-from validation import compute_validation
 from datasets import *
 from training_module import train
 from testing_module import test
