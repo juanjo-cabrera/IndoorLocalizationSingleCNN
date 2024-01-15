@@ -74,6 +74,13 @@ test_dataloader_sunny = DataLoader(test_dataset_sunny,
                         num_workers=0,
                         batch_size=1)
 
+global_test_dataset = torch.utils.data.ConcatDataset([test_dataset_cloudy, test_dataset_night, test_dataset_sunny])
+global_test_dataloader = DataLoader(global_test_dataset,
+                        shuffle=False,
+                        num_workers=0,
+                        batch_size=1)
+
+
 train_noDA_data = dset.ImageFolder(root=Config.training_noDA_dir, transform=transforms.ToTensor())
 train_noDA_dataloader = DataLoader(train_noDA_data,
                         shuffle=True,
