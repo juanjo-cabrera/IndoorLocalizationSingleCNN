@@ -9,7 +9,7 @@ def run(model, model_name, train_dataloader):
     torch.multiprocessing.freeze_support()
 
     print('Start training of' + model_name)
-    train(model, train_dataloader, validation_dataloader, model_name, max_epochs=30)
+    # train(model, train_dataloader, validation_dataloader, model_name, max_epochs=30)
 
     test_model = torch.load(model_name).cuda()
     accuracy_cloudy, error_loc_cloudy = test(test_model, map_data, test_dataloader_cloudy)

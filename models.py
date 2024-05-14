@@ -1,5 +1,7 @@
+import torch
 import torch.nn as nn
 from torchvision.models import resnet50,resnet152, convnext_large, resnext101_64x4d, efficientnet_v2_l, mobilenet_v3_large, alexnet
+from thop import profile
 
 alexnet_noDA = alexnet(pretrained=True)
 alexnet_noDA.classifier[6] = nn.Linear(4096, 9)
@@ -63,3 +65,26 @@ efficientnet.classifier[1] = nn.Linear(1280, 9)
 
 mobilenet = mobilenet_v3_large(weights='IMAGENET1K_V1')
 mobilenet.classifier[3] = nn.Linear(1280, 9)
+
+input = torch.randn(1, 3, 512, 128)
+flops, params = profile(alexnet_noDA, inputs=(input, ))
+print(f" ####Model: AlexNet, FLOPs: {flops/ 1e9} G, Parameters: {params}")
+
+flops, params = profile(resnet_50, inputs=(input, ))
+print(f" ####Model: ResNet-50, FLOPs: {flops/ 1e9} G, Parameters: {params}")
+
+flops, params = profile(resnet_152_DA1, inputs=(input, ))
+print(f" ####Model: ResNet-152, FLOPs: {flops/ 1e9} G, Parameters: {params}")
+
+flops, params = profile(convnext_DA1, inputs=(input, ))
+print(f" ####Model: ConvNext-L, FLOPs: {flops/ 1e9} G, Parameters: {params}")
+
+flops, params = profile(resnext, inputs=(input, ))
+print(f" ####Model: ResNext, FLOPs: {flops/ 1e9} G, Parameters: {params}")
+
+flops, params = profile(efficientnet, inputs=(input, ))
+print(f" ####Model: EfficientNet, FLOPs: {flops/ 1e9} G, Parameters: {params}")
+
+flops, params = profile(mobilenet, inputs=(input, ))
+print(f" ####Model: MobileNet, FLOPs: {flops/ 1e9} G, Parameters: {params}")
+
