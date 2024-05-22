@@ -7,21 +7,21 @@ from evaluate import FreiburgMap
 
 
 class Config():
-   testing_cloudy_dir = '/home/arvc/Juanjo/Datasets/Friburgo/TestCloudy'
-   testing_night_dir = '/home/arvc/Juanjo/Datasets/Friburgo/TestNight'
-   testing_sunny_dir = '/home/arvc/Juanjo/Datasets/Friburgo/TestSunny'
+   testing_cloudy_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/TestCloudy'
+   testing_night_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/TestNight'
+   testing_sunny_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/TestSunny'
 
-   map_dir = '/home/arvc/Juanjo/Datasets/Friburgo/Entrenamiento'
+   map_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/Entrenamiento'
 
-   training_noDA_dir = '/home/arvc/Juanjo/Datasets/Friburgo/Entrenamiento'
-   training_DA1_dir = '/home/arvc/Juanjo/Datasets/Friburgo/DA_carpetas/DA1'
-   training_DA2_dir = '/home/arvc/Juanjo/Datasets/Friburgo/DA_carpetas/DA2'
-   training_DA3_dir = '/home/arvc/Juanjo/Datasets/Friburgo/DA_carpetas/DA3'
-   training_DA4_dir = '/home/arvc/Juanjo/Datasets/Friburgo/DA_carpetas/DA4'
-   training_DA5_dir = '/home/arvc/Juanjo/Datasets/Friburgo/DA_carpetas/DA5'
-   training_DA6_dir = '/home/arvc/Juanjo/Datasets/Friburgo/DA_carpetas/DA6'
+   training_noDA_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/Entrenamiento'
+   training_DA1_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/DA_carpetas/DA1'
+   training_DA2_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/DA_carpetas/DA2'
+   training_DA3_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/DA_carpetas/DA3'
+   training_DA4_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/DA_carpetas/DA4'
+   training_DA5_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/DA_carpetas/DA5'
+   training_DA6_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/DA_carpetas/DA6'
 
-   validation_dir= '/home/arvc/Juanjo/Datasets/Friburgo/Validacion'
+   validation_dir= '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/Validacion'
    train_batch_size = 16
    validation_batch_size = 512
 

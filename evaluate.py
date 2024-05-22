@@ -6,11 +6,12 @@ import numpy as np
 import torch.nn.functional as F
 import torch
 from operator import itemgetter
+import time
 
 
 class Config():
-   testing_dir = '/home/arvc/Juanjo/Datasets/Friburgo/TestCloudy'
-   map_dir = '/home/arvc/Juanjo/Datasets/Friburgo/Entrenamiento/'
+   testing_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/TestCloudy/'
+   map_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/Entrenamiento/'
    train_batch_size = 1
    train_number_epochs = 30
    num_classes = 9
@@ -122,6 +123,7 @@ class FreiburgMap():
         return room_vectors
 
     def evaluate_error_position(self, test_img, coor_test, model, activation):
+        start_time = time.time()
         output = model(test_img)
         test_vector = activation['latent_vector'].flatten()
         _, room_predicted = torch.max(output.data, 1)
@@ -134,8 +136,11 @@ class FreiburgMap():
         ind_min = distances.index(min(distances))
 
         coor_map = room_coors[ind_min]
+        end_time = time.time()
+        processing_time = end_time - start_time
+        # print(f'Processing time: {processing_time}')
         error_localizacion = F.pairwise_distance(coor_test, coor_map.cuda())
-        return error_localizacion.detach().cpu().numpy(), room_predicted
+        return error_localizacion.detach().cpu().numpy(), room_predicted, processing_time
 
 
 def run():
