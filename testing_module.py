@@ -58,9 +58,11 @@ def test(model, map_data, test_dataloader):
     print('Accuracy of the network on test images:', accuracy)
     return accuracy, mae, varianza, desv, mse, rmse, mean_processing_time
 
-ruta = '/home/arvc/Juanjo/develop/Extension Orlando/'
-models_names = ['AlexNet', 'resnet_152', 'convnext', 'resnext', 'efficientnet', 'mobilenet']
-training_sequences_names = ['noDA', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6']
+ruta = '/home/arvc/Juanjo/develop/Extension Orlando/Paper_models/'
+# models_names = ['AlexNet', 'resnet_152', 'convnext', 'resnext', 'efficientnet', 'mobilenet']
+models_names = ['convnext']
+# training_sequences_names = ['noDA', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6']
+training_sequences_names = ['noDA']
 
 # results = '/home/arvc/Juanjo/develop/Extension Orlando/global_results_after_revision.csv'
 # with open(results, 'w', newline='') as file:
@@ -75,7 +77,7 @@ training_sequences_names = ['noDA', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6']
 #             writer.writerow([model_name, dataset_name, accuracy, mae, varianza, desv, mse, rmse, mean_processing_time])
 
 print('CLOUDY')
-results = '/home/arvc/Juanjo/develop/Extension Orlando/cloudy_results_after_revision.csv'
+results = '/home/arvc/Juanjo/develop/Extension Orlando/cloudy_results_after_revision_preuba.csv'
 with open(results, 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(
@@ -88,7 +90,7 @@ with open(results, 'w', newline='') as file:
             writer.writerow([model_name, dataset_name, accuracy, mae, varianza, desv, mse, rmse, mean_processing_time])
 
 print('NIGHT')
-results = '/home/arvc/Juanjo/develop/Extension Orlando/night_results_after_revision.csv'
+results = '/home/arvc/Juanjo/develop/Extension Orlando/night_results_after_revision_preuba.csv'
 with open(results, 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(
@@ -101,7 +103,7 @@ with open(results, 'w', newline='') as file:
             writer.writerow([model_name, dataset_name, accuracy, mae, varianza, desv, mse, rmse, mean_processing_time])
 
 print('SUNNY')
-results = '/home/arvc/Juanjo/develop/Extension Orlando/sunny_results_after_revision.csv'
+results = '/home/arvc/Juanjo/develop/Extension Orlando/sunny_results_after_revision_preuba.csv'
 with open(results, 'w', newline='') as file:
     writer = csv.writer(file)
     writer.writerow(

@@ -88,3 +88,21 @@ print(f" ####Model: EfficientNet, FLOPs: {flops/ 1e9} G, Parameters: {params}")
 flops, params = profile(mobilenet, inputs=(input, ))
 print(f" ####Model: MobileNet, FLOPs: {flops/ 1e9} G, Parameters: {params}")
 
+
+
+# Para obtener el tamaño de los parámetros
+param_size = sum(p.numel() * p.element_size() for p in convnext_DA1.parameters())
+param_size_MB = param_size / (1024 ** 2)
+
+# Para obtener el tamaño de las activaciones (requiere un forward pass)
+# dummy_input = torch.randn(1, 3, 224, 224)  # ajustar según la entrada de tu modelo
+with torch.no_grad():
+    _ = convnext_DA1(input)
+
+activation_size = torch.cuda.memory_allocated()  # Obtiene memoria de activaciones
+activation_size_MB = activation_size / (1024 ** 2)
+
+# Estimación total
+total_size_MB = param_size_MB + activation_size_MB
+print(f'Tamaño total de la memoria estimada: {total_size_MB} MB')
+

@@ -126,11 +126,14 @@ class FreiburgMap():
         start_time = time.time()
         output = model(test_img)
         test_vector = activation['latent_vector'].flatten()
+        print(test_vector.shape[0])
         _, room_predicted = torch.max(output.data, 1)
         room_vectors = self.load_room_vectors(room_predicted)
         room_images, room_coors = self.load_room_map(room_predicted)
         distances = []
         for vector in room_vectors:
+            # print('Vector size: ', vector.shape[0])
+            # print(f'Memory size of a vector: {vector.element_size() * vector.nelement()} Bytes')
             euclidean_distance = F.pairwise_distance(test_vector, vector, keepdim=True)
             distances.append(euclidean_distance)
         ind_min = distances.index(min(distances))
