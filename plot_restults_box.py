@@ -99,12 +99,12 @@ if all_data:
         # vertical_offset = {'Cloudy': 0.075, 'Night': 0.12, 'Sunny': 0.09, 'Global': 0.09}
         # ax.text(x + hue_offset, mean_val + vertical_offset[illum] , f'{mean_val:.2f}',
         #         ha='center', va='bottom', color='black', fontsize=font)
-        ax.text(x + hue_offset, - 0.18, f'{mean_val:.2f}',
-                ha='center', va='bottom', color='black', fontsize=font * 0.9, rotation = 30)
+        ax.text(x + hue_offset, - 0.25, f'{mean_val:.2f}',
+                ha='center', va='bottom', color='black', fontsize=font * 0.9, rotation = 45)
         ax.scatter(x + hue_offset, mean_val, color='black', s=100, zorder=3)  # zorder to draw on top of the boxes
 
     plt.xlim(- hue_width*2/3, len(training_sequences_names) - 1 + hue_width*2/3)  # Ajusta los límites del eje x
-    plt.ylim(-0.18, 2.42)  # Ajusta los límites del eje y
+    plt.ylim(-0.25, 2.42)  # Ajusta los límites del eje y
     plt.xticks(fontsize=font)
     plt.yticks(fontsize=font)
     plt.subplots_adjust(left=0.06, right=0.995, bottom=0.082, top=0.95)
@@ -251,12 +251,12 @@ if all_data:
         hue_width = len(illuminations) * factor
         hue_offset = -hue_width / 2 + illuminations.index(illum) * factor  + factor  / 2
         # hue_offset = {'cloudy': -0.27, 'night': 0, 'sunny': 0.27, 'global': 0.40}  # Adjust offset according to hue categories
-        ax.text(x + hue_offset, - 1.2 , f'{mean_val:.2f}',
-                ha='center', va='bottom', color='black', fontsize=font*0.95, rotation = 30)
+        ax.text(x + hue_offset, - 0.8 , f'{mean_val:.2f}',
+                ha='center', va='bottom', color='black', fontsize=font*0.95, rotation = 45)
         ax.scatter(x + hue_offset, mean_val, color='black', s=100, zorder=3)  # zorder to draw on top of the boxes
 
     plt.xlim(- hue_width*2/3, len(models_names) - 1 + hue_width*2/3)  # Ajusta los límites del eje x
-    plt.ylim(-1.2, 14.8)  # Ajusta los límites del eje y
+    plt.ylim(-0.8, 7)  # Ajusta los límites del eje y
     plt.xticks(fontsize=font)
     plt.yticks(fontsize=font)
     plt.subplots_adjust(left=0.055, right=0.995, bottom=0.08, top=0.95)
