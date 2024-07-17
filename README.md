@@ -15,18 +15,7 @@ This work presents an evaluation of CNN models and data augmentation techniques 
 
 We evaluate the impact of different state-of-the-art CNN models such as ConvNeXt for the proposed localization. Various data augmentation visual effects are separately employed for training the model, and their impact is assessed. The performance of the resulting CNNs is evaluated under real operation conditions, including changes in lighting conditions.
 
-## Citation
-If you find this work useful, please consider citing:
-
-  @article{Cabrera2024CNNLocalization,
-  title={An evaluation of CNN models and data augmentation techniques in hierarchical localization of mobile robots},
-  author={J.J. Cabrera and O.J. Céspedes and S. Cebollada and O. Reinoso and L. Payá},
-  journal={Evolving Systems},
-  year={2024},
-  publisher={Springer-Verlag},
-  issn={1868-6486},
-  doi={10.1007/s12530-024-09604-6}
-  }
+![Example Image](Hierarchical_Localization.PNG)
 
 ## Comparison with Other Methods
 
@@ -52,3 +41,16 @@ ization with panoramic views and triplet loss functions (2024)
 [4] Cebollada, S., L. Payá, X. Jiang, and O. Reinoso. 2022. Development and
 use of a convolutional neural network for hierarchical appearance-based
 localization. Artificial Intelligence Review 55 (4): 2847–2874 
+
+## Citation
+If you find this work useful, please consider citing:
+
+  @article{Cabrera2024CNNLocalization,
+  title={An evaluation of CNN models and data augmentation techniques in hierarchical localization of mobile robots},
+  author={J.J. Cabrera and O.J. Céspedes and S. Cebollada and O. Reinoso and L. Payá},
+  journal={Evolving Systems},
+  year={2024},
+  publisher={Springer-Verlag},
+  issn={1868-6486},
+  doi={10.1007/s12530-024-09604-6}
+  }
