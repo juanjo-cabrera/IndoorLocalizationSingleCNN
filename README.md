@@ -45,12 +45,12 @@ localization. Artificial Intelligence Review 55 (4): 2847–2874
 ## Citation
 If you find this work useful, please consider citing:
 
-  @article{Cabrera2024CNNLocalization,
-  title={An evaluation of CNN models and data augmentation techniques in hierarchical localization of mobile robots},
-  author={J.J. Cabrera and O.J. Céspedes and S. Cebollada and O. Reinoso and L. Payá},
-  journal={Evolving Systems},
-  year={2024},
-  publisher={Springer-Verlag},
-  issn={1868-6486},
-  doi={10.1007/s12530-024-09604-6}
-  }
+    @article{Cabrera2024CNNLocalization,
+    title={An evaluation of CNN models and data augmentation techniques in hierarchical localization of mobile robots},
+    author={J.J. Cabrera and O.J. Céspedes and S. Cebollada and O. Reinoso and L. Payá},
+    journal={Evolving Systems},
+    year={2024},
+    publisher={Springer-Verlag},
+    issn={1868-6486},
+    doi={10.1007/s12530-024-09604-6}
+    }
