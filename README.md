@@ -33,11 +33,14 @@ We evaluate the impact of different state-of-the-art CNN models such as ConvNeXt
 [1] Cabrera, J.J., Cebollada, S., Flores, M., Reinoso, O., Payá, L.: Training, optimiza-
 tion and validation of a cnn for room retrieval and description of omnidirectional
 images. SN Computer Science 3(4), 1–13 (2022)
+
 [2] Rostkowska, M. and P. Skrzypczy´nski. 2023. Optimizing appearance-based
 localization with catadioptric cameras: Small-footprint models for real-time
 inference on edge devices. Sensors 23 (14): 6485 
+
 [3] Alfaro, M., Cabrera, J.J., Jiménez, L.M., Reinoso, Payá, L.: Hierarchical local-
 ization with panoramic views and triplet loss functions (2024)
+
 [4] Cebollada, S., L. Payá, X. Jiang, and O. Reinoso. 2022. Development and
 use of a convolutional neural network for hierarchical appearance-based
 localization. Artificial Intelligence Review 55 (4): 2847–2874 
