@@ -100,11 +100,10 @@ You can install the required packages using:
 
 ### Dataset
 
-This paper uses de [COsy Localization Database (Freiburg)](https://www.cas.kth.se/COLD/cold-freiburg.html), which has been divided into training, validation and test. As for the training, six data augmentation effects are individually applied to the training set and the whole dataset employed can be downloaded at: https://drive.google.com/drive/folders/1izX9LsE9f34q3cq2UbUEcneBxfFwPKh9?usp=sharing
-
+This project uses the [COsy Localization Database (Freiburg)](https://www.cas.kth.se/COLD/cold-freiburg.html), which has been divided into training, validation, and test sets. Six data augmentation effects are individually applied to the training set. The dataset used in this research can be downloaded from: https://drive.google.com/drive/folders/1izX9LsE9f34q3cq2UbUEcneBxfFwPKh9?usp=sharing
 
 ### Configuration:
-Adjust the dataset path (dataset_folder) and the other training parameters in config/parameters.yaml as needed.
+Adjust the dataset path (dataset_folder) and the training parameters in config/parameters.yaml as needed.
     
     dataset_folder: '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/'
     
