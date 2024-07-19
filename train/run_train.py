@@ -1,7 +1,6 @@
 from datasets import *
 from training_module import train
 from models import *
-import csv
 from torchvision.models import resnet152, convnext_large, resnext101_64x4d, efficientnet_v2_l, mobilenet_v3_large, alexnet
 from config import PARAMS
 import os

@@ -17,6 +17,27 @@ We evaluate the impact of different state-of-the-art CNN models such as ConvNeXt
 
 ![Example Image](media/Hierarchical_Localization.PNG)
 
+## Repository Structure
+
+The repository is structured as follows:
+
+    ├── config
+    │ ├── config.pu
+    │ ├── parameters.yaml
+    ├── eval
+    │ ├── evaluate.py
+    │ ├── evaluation_utils.py
+    │ ├── save_all_test_errors.py
+    │ ├── validation.py
+    ├── train
+    │ ├── run_train.py
+    │ ├── training_module.py
+    ├── README.md
+    ├── datasets.py 
+    ├── models.py
+    ├── requirements.txt
+    └── LICENSE
+
 ## Comparison with Other Methods
 
 | Model                             | Cloudy Error | Night Error | Sunny Error |
