@@ -15,7 +15,7 @@ This work presents an evaluation of CNN models and data augmentation techniques 
 
 We evaluate the impact of different state-of-the-art CNN models such as ConvNeXt for the proposed localization. Various data augmentation visual effects are separately employed for training the model, and their impact is assessed. The performance of the resulting CNNs is evaluated under real operation conditions, including changes in lighting conditions.
 
-![Example Image](Hierarchical_Localization.PNG)
+![Example Image](media/Hierarchical_Localization.PNG)
 
 ## Comparison with Other Methods
 
