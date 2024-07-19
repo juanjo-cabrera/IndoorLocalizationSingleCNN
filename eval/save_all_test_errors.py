@@ -1,6 +1,4 @@
-import numpy as np
-import torch
-from evaluate import FreiburgMap
+from eval.evaluation_utils import FreiburgMap
 from datasets import *
 import csv
 

@@ -7,14 +7,7 @@ import torch.nn.functional as F
 import torch
 from operator import itemgetter
 import time
-
-
-class Config():
-   testing_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/TestCloudy/'
-   map_dir = '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/Entrenamiento/'
-   train_batch_size = 1
-   train_number_epochs = 30
-   num_classes = 9
+from config import PARAMS
 
 
 class FreiburgMap():
@@ -126,7 +119,7 @@ class FreiburgMap():
         start_time = time.time()
         output = model(test_img)
         test_vector = activation['latent_vector'].flatten()
-        print(test_vector.shape[0])
+        # print(test_vector.shape[0])
         _, room_predicted = torch.max(output.data, 1)
         room_vectors = self.load_room_vectors(room_predicted)
         room_images, room_coors = self.load_room_map(room_predicted)
@@ -154,7 +147,7 @@ if __name__ == '__main__':
     run()
 
 
-map_data = dset.ImageFolder(root=Config.map_dir, transform=transforms.ToTensor())
+map_data = dset.ImageFolder(root=PARAMS.map_dir, transform=transforms.ToTensor())
 map_dataloader = DataLoader(map_data,
                         shuffle=False,
                         num_workers=0,

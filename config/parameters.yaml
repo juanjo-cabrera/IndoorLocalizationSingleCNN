@@ -1,0 +1,12 @@
+dataset_folder: '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/'
+
+train_batch_size: 16
+validation_batch_size: 512
+num_classes: 9
+epochs: 30
+
+models_to_train: ['AlexNet', 'resnet_152', 'convnext', 'resnext', 'efficientnet', 'mobilenet']
+DA_training_sequences: ['noDA', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6']
+
+models_to_test: ['AlexNet', 'resnet_152', 'convnext', 'resnext', 'efficientnet', 'mobilenet']
+DA_testing_sequences: ['noDA', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6']

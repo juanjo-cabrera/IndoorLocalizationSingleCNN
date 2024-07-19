@@ -104,7 +104,7 @@ if all_data:
         ax.scatter(x + hue_offset, mean_val, color='black', s=100, zorder=3)  # zorder to draw on top of the boxes
 
     plt.xlim(- hue_width*2/3, len(training_sequences_names) - 1 + hue_width*2/3)  # Ajusta los límites del eje x
-    plt.ylim(-0.25, 2.42)  # Ajusta los límites del eje y
+    plt.ylim(-0.26, 2.42)  # Ajusta los límites del eje y
     plt.xticks(fontsize=font)
     plt.yticks(fontsize=font)
     plt.subplots_adjust(left=0.06, right=0.995, bottom=0.082, top=0.95)
@@ -256,7 +256,7 @@ if all_data:
         ax.scatter(x + hue_offset, mean_val, color='black', s=100, zorder=3)  # zorder to draw on top of the boxes
 
     plt.xlim(- hue_width*2/3, len(models_names) - 1 + hue_width*2/3)  # Ajusta los límites del eje x
-    plt.ylim(-0.8, 7)  # Ajusta los límites del eje y
+    plt.ylim(-0.83, 7)  # Ajusta los límites del eje y
     plt.xticks(fontsize=font)
     plt.yticks(fontsize=font)
     plt.subplots_adjust(left=0.055, right=0.995, bottom=0.08, top=0.95)

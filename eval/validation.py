@@ -1,6 +1,5 @@
 import torch
 
-
 def compute_validation(model, dataloader):
     model.eval()
     # Testing Accuracy
