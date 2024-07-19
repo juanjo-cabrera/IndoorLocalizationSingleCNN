@@ -17,75 +17,6 @@ We evaluate the impact of different state-of-the-art CNN models such as ConvNeXt
 
 ![Example Image](media/Hierarchical_Localization.PNG)
 
-## Repository Structure
-
-The repository is structured as follows:
-
-    ├── config
-    │ ├── config.py
-    │ ├── parameters.yaml
-    ├── eval
-    │ ├── evaluate.py
-    │ ├── evaluation_utils.py
-    │ ├── save_all_test_errors.py
-    │ ├── validation.py
-    ├── train
-    │ ├── run_train.py
-    │ ├── training_module.py
-    ├── datasets.py 
-    ├── models.py
-    ├── README.md
-    └── requirements.txt
-
-## Getting Started
-
-### Prerequisites
-
-Ensure you have the following installed:
-- Python 3.8+
-- Torch
-- NumPy
-- Matplotlib
-
-You can install the required packages using:
-
-    pip install -r requirements.txt
-
-## Usage
-
-### Dataset
-
-This paper uses de COsy Localization Database, which has been divided into training, validation and test. As for the training, six data augmentation effects are individually and can be found at:
-
-### Configuration:
-Adjust the dataset path (dataset_folder) and the other training parameters in config/parameters.yaml as needed.
-    
-    dataset_folder: '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/'
-    
-    train_batch_size: 16
-    validation_batch_size: 512
-    num_classes: 9
-    epochs: 30
-    
-    models_to_train: ['AlexNet', 'resnet_152', 'convnext', 'resnext', 'efficientnet', 'mobilenet']
-    DA_training_sequences: ['noDA', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6']
-    
-    models_to_test: ['AlexNet', 'resnet_152', 'convnext', 'resnext', 'efficientnet', 'mobilenet']
-    DA_testing_sequences: ['noDA', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6']
-    
-
-### Training:
-Run the training script:
-
-    python3 train/run_train.py
-
-### Evaluation:
-
-Evaluate the trained model:
-
-    python3 eval/evaluate.py 
-
-
 
 
 ## Comparison with Other Methods
@@ -128,3 +59,77 @@ If you find this work useful, please consider citing:
     issn={1868-6486},
     doi={10.1007/s12530-024-09604-6}
     }
+
+
+
+## Repository Structure
+
+The repository is structured as follows:
+
+    ├── config
+    │ ├── config.py
+    │ ├── parameters.yaml
+    ├── eval
+    │ ├── evaluate.py
+    │ ├── evaluation_utils.py
+    │ ├── save_all_test_errors.py
+    │ ├── validation.py
+    ├── train
+    │ ├── run_train.py
+    │ ├── training_module.py
+    ├── datasets.py 
+    ├── models.py
+    ├── README.md
+    └── requirements.txt
+
+## Getting Started
+
+### Prerequisites
+
+Ensure you have the following installed:
+- Python 3.8+
+- Torch
+- NumPy
+- Matplotlib
+
+You can install the required packages using:
+
+    pip install -r requirements.txt
+
+## Usage
+
+### Dataset
+
+This paper uses de [COsy Localization Database (Freiburg)](https://www.cas.kth.se/COLD/cold-freiburg.html), which has been divided into training, validation and test. As for the training, six data augmentation effects are individually applied to the training set and the whole dataset employed can be downloaded at: https://drive.google.com/drive/folders/1izX9LsE9f34q3cq2UbUEcneBxfFwPKh9?usp=sharing
+
+
+### Configuration:
+Adjust the dataset path (dataset_folder) and the other training parameters in config/parameters.yaml as needed.
+    
+    dataset_folder: '/media/arvc/DATOS/Juanjo/Datasets/Friburgo/'
+    
+    train_batch_size: 16
+    validation_batch_size: 512
+    num_classes: 9
+    epochs: 30
+    
+    models_to_train: ['AlexNet', 'resnet_152', 'convnext', 'resnext', 'efficientnet', 'mobilenet']
+    DA_training_sequences: ['noDA', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6']
+    
+    models_to_test: ['AlexNet', 'resnet_152', 'convnext', 'resnext', 'efficientnet', 'mobilenet']
+    DA_testing_sequences: ['noDA', 'DA1', 'DA2', 'DA3', 'DA4', 'DA5', 'DA6']
+    
+
+### Training:
+Run the training script:
+
+    python3 train/run_train.py
+
+### Evaluation:
+
+Evaluate the trained model:
+
+    python3 eval/evaluate.py 
+
+
+
