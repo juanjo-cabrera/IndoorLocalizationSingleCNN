@@ -6,7 +6,7 @@
 **ISSN:** 1868-6486  
 **DOI:** [10.1007/s12530-024-09604-6](https://doi.org/10.1007/s12530-024-09604-6)  
 **arXiv:** [2407.10596](https://arxiv.org/abs/2407.10596)
-
+**YouTube:** [Video link](https://www.youtube.com/watch?v=unLCac4Ip5I)
 ## Introduction
 
 This work presents an evaluation of CNN models and data augmentation techniques to carry out the hierarchical localization of a mobile robot using omnidirectional images. An ablation study of different state-of-the-art CNN models used as the backbone is presented, and a variety of data augmentation visual effects are proposed to address the visual localization of the robot. The proposed method is based on adapting and retraining a CNN with a dual purpose: 
